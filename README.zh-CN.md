@@ -37,7 +37,7 @@ Agent 做真实工作（文件、终端、浏览器、桌面）→
 | 只能调 API 有限的工具 | **完整的 CLI、终端、浏览器、桌面权限** |
 | 长时间任务会超时 | **永远在线，无超时** |
 | 一次只能跑一个 | **3 个以上 Agent 同时运行** |
-| 不支持 Windows | **✅ ConPTY 原生 Windows 支持** |
+| 不支持 Windows | **✅ Windows 桌面 API 直连** |
 
 ---
 
@@ -66,10 +66,11 @@ Agent 做真实工作（文件、终端、浏览器、桌面）→
 
 ### 4. [AGY 反重力 QQ 桥 (Windows)](https://github.com/zz327455573/Antigravity-QQ-Bridge-Win)
 `antigravity-qq-bridge-win` — Windows 桌面远程 AI 工作站。
-- ✅ ConPTY 原生启动（不用 cmd.exe 套壳）
-- ✅ GBK 编码处理（Windows 中文不乱码）
-- ✅ 直接 PID 追踪（不依赖脆弱的进程链）
-- ✅ 代理配置从 `.env` 透传
+- ✅ 直连 `language_server.exe` API（无需 PTY/ConPTY）
+- ✅ 动态进程发现（自动检测端口 + CSRF token）
+- ✅ 模型自动同步（读取桌面版 `settings.json`）
+- ✅ 会话持久化（`conversation_id` 重启后仍保留）
+- ✅ UTF-8 强制输出（emoji 不会导致 GBK 崩溃）
 
 ---
 

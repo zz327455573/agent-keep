@@ -37,7 +37,7 @@ Responds with results → Context stays alive
 | Limited to API-accessible tools | **Full CLI, terminal, browser, desktop access** |
 | Timeout on long tasks | **Always-on, no timeout** |
 | One agent at a time | **3+ agents running simultaneously** |
-| No Windows support | **✅ ConPTY native Windows support** |
+| No Windows support | **✅ Windows desktop API direct-connect** |
 
 ---
 
@@ -66,10 +66,11 @@ Each bridge is a standalone, pip-installable package. Pick the agents you use.
 
 ### 4. [Antigravity QQ Bridge (Windows)](https://github.com/zz327455573/Antigravity-QQ-Bridge-Win)
 `antigravity-qq-bridge-win` — Windows desktop remote AI workstation.
-- ✅ ConPTY native spawn (no cmd.exe wrapper)
-- ✅ GBK encoding handling (Chinese output on Windows)
-- ✅ Direct PID tracking (no fragile process chain)
-- ✅ Proxy pass-through from `.env`
+- ✅ Direct API connection to `language_server.exe` (no PTY/ConPTY needed)
+- ✅ Dynamic process discovery (auto-detect port + CSRF token)
+- ✅ Model auto-sync from desktop GUI (`settings.json`)
+- ✅ Session persistence (`conversation_id` survives restarts)
+- ✅ UTF-8 forced output (no GBK crash on emoji)
 
 ---
 

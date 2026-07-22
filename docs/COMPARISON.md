@@ -8,7 +8,7 @@
 | **Context management** | ✅ Agent manages naturally | ❌ Bridge manages history | ❌ API manages | ✅ Agent manages |
 | **Tool access** | ✅ Full CLI/terminal/desktop | ❌ Limited by API | ❌ Sandboxed | ✅ Full |
 | **Multi-agent** | ✅ 3+ simultaneously | ❌ Usually 1 | ✅ Easy | ❌ Manual tmux switching |
-| **Windows support** | ✅ ConPTY native | ❌ Linux only | ✅ API-based | ❌ SSH-only |
+| **Windows support** | ✅ ConPTY + desktop API direct-connect | ❌ Linux only | ✅ API-based | ❌ SSH-only |
 | **Approval flow** | ✅ QQ card buttons | ❌ No | ✅ API-based | ❌ Manual |
 | **Long tasks** | ✅ No timeout | ❌ Timeout issues | ✅ API handles | ✅ No timeout |
 | **Remote access** | ✅ Phone → QQ/WeChat | ✅ Phone → IM | ✅ Anywhere | ❌ SSH only |
