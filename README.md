@@ -45,6 +45,16 @@ Responds with results → Context stays alive
 
 Each bridge is a standalone, pip-installable package. Pick the agents you use.
 
+## Repository Layout
+
+This repository now contains real bridge source code under [`packages/`](./packages):
+
+- `packages/claude-code-qq-bridge/`
+- `packages/codex-qq-bridge/`
+- `packages/agy-qq-bridge/`
+
+The top-level repo is the umbrella monorepo. Each bridge package keeps its own Python package metadata, entrypoints, and docs.
+
 ### 1. [Claude Code QQ Bridge](https://github.com/zz327455573/claude-code-qq-bridge)
 `claude-code-qq-bridge` — The most mature bridge.
 - ✅ Approval buttons via QQ card messages
@@ -162,8 +172,16 @@ You're running Claude Code / Codex / AGY on your server. You SSH in, type comman
 ## Quick Start
 
 ```bash
-# Pick any bridge, install with pip:
-pip install git+https://github.com/zz327455573/claude-code-qq-bridge.git
+# Clone the monorepo
+git clone https://github.com/zz327455573/agent-keep.git
+cd agent-keep
+
+# Pick any bridge package, install with pip:
+pip install ./packages/claude-code-qq-bridge
+
+# Or install another bridge package:
+pip install ./packages/codex-qq-bridge
+pip install ./packages/agy-qq-bridge
 
 # Initialize (only asks for QQ Bot credentials)
 claude-code-qq-bridge --init

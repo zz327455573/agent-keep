@@ -45,6 +45,16 @@ Agent 做真实工作（文件、终端、浏览器、桌面）→
 
 每个桥都是独立可 pip 安装的包。你用哪个 Agent 就装哪个。
 
+## 仓库结构
+
+这个总仓现在已经包含真实源码，统一放在 [`packages/`](./packages) 目录下：
+
+- `packages/claude-code-qq-bridge/`
+- `packages/codex-qq-bridge/`
+- `packages/agy-qq-bridge/`
+
+顶层仓库是总 monorepo，每个桥子目录继续保留自己的 Python 包配置、命令入口和说明文档。
+
 ### 1. [Claude Code QQ 桥](https://github.com/zz327455573/claude-code-qq-bridge)
 `claude-code-qq-bridge` — 最成熟的桥。
 - ✅ QQ 卡片审批按钮
@@ -161,8 +171,16 @@ Agent 做真实工作（文件、终端、浏览器、桌面）→
 ## 快速开始
 
 ```bash
-# 选一个桥，pip 安装：
-pip install git+https://github.com/zz327455573/claude-code-qq-bridge.git
+# 克隆总仓
+git clone https://github.com/zz327455573/agent-keep.git
+cd agent-keep
+
+# 选一个桥，从 packages 里安装：
+pip install ./packages/claude-code-qq-bridge
+
+# 或安装其他桥：
+pip install ./packages/codex-qq-bridge
+pip install ./packages/agy-qq-bridge
 
 # 初始化（只问 QQ 机器人凭证）
 claude-code-qq-bridge --init
